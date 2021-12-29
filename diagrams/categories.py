@@ -56,7 +56,7 @@ def draw(data):
     fig.tight_layout()
     plt.show()
 
-    fig.savefig('categories.eps', format='eps')
+    fig.savefig('out/categories.svg', format='svg')
 
 def create_categories(data, configs):
     result = {}
