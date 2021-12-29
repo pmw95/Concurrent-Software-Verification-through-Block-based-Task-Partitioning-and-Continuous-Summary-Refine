@@ -7,10 +7,14 @@ def draw(data):
     plt.rc('text', usetex=True)
 
     colors = [
-        (1/255, 142/255, 66/255),
-        (60/255, 9/255, 108/255),
-        (167/255, 29/255, 49/255)
+        (27/255, 153/255, 139/255),
+        (97/255, 61/255, 193/255),
+        (237/255, 33/255, 124/255)
     ]
+
+    # (27/255, 153/255, 139/255),
+    # (97/255, 61/255, 193/255),
+    # (146/255, 20/255, 12/255)
 
     labels = [
         '\\textbf{Predicate Analysis}',
@@ -42,10 +46,14 @@ def draw(data):
         frameon=False,
         bbox_to_anchor=(1.11, 0.6)
     )
+
+    ax.tick_params(axis='x', pad=7)
     ax.set_xticks(x, labels, multialignment='center', linespacing=1.65)
 
     fig.tight_layout()
     plt.show()
+
+    fig.savefig('categories.eps', format='eps')
 
 def create_categories(data, configs):
     result = {}
