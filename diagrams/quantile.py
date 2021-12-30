@@ -60,7 +60,7 @@ def draw(data, colors, only_correct=True):
     for handle in legend.legendHandles:
         handle.set_sizes([20])
     for text in legend.get_texts():
-        text.set_y(2.3)
+        text.set_y(2)
 
     fig.tight_layout()
     plt.show()

@@ -1,6 +1,7 @@
 from parse import parse
 from diagrams.categories import create_categories
 from diagrams.quantile import create_quantile
+from diagrams.comparison import create_comparison
 import pickle
 
 if __name__ == '__main__':
@@ -21,12 +22,20 @@ if __name__ == '__main__':
     #     'program-entry+reuse+no-redundancy-checks'
     # ])
 
-    create_quantile(data, [
+    # create_quantile(data, [
+    #     'baseline-predicateAnalysis',
+    #     'program-entry+reuse+no-redundancy-checks',
+    #     'program-entry+reuse+redundancy-checks'
+    # ], [
+    #     (97/255, 61/255, 193/255),
+    #     (237/255, 33/255, 124/255),
+    #     (27 / 255, 153 / 255, 139 / 255)
+    # ])
+
+    create_comparison(data, [
         'baseline-predicateAnalysis',
-        'program-entry+reuse+no-redundancy-checks',
         'program-entry+reuse+redundancy-checks'
-    ], [
-        (97/255, 61/255, 193/255),
-        (237/255, 33/255, 124/255),
-        (27 / 255, 153 / 255, 139 / 255)
     ])
+
+
+

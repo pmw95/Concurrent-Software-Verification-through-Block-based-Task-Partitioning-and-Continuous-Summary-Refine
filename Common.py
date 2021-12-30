@@ -17,42 +17,42 @@ labels = {
         },
     'all-blocks+reuse+redundancy-checks':
         {
-            'label': '\\textbf{Concurrent Analysis} (Spawn on All Blocks, Redundancy Checks, Component Reuse)',
+            'label': '\\textbf{Concurrent Analysis}\n (Spawn on All Blocks, Redundancy Checks, Component Reuse)',
             'color': None
         },
     'all-blocks+no-reuse+redundancy-checks':
         {
-            'label': '\\textbf{Concurrent Analysis} (Spawn on All Blocks, Redundancy Checks, No Component Reuse)',
+            'label': '\\textbf{Concurrent Analysis}\n (Spawn on All Blocks, Redundancy Checks, No Component Reuse)',
             'color': None
         },
     'all-blocks+reuse+no-redundancy-checks':
         {
-            'label': '\\textbf{Concurrent Analysis} (Spawn on All Blocks, No Redundancy Checks, Component Reuse)',
+            'label': '\\textbf{Concurrent Analysis}\n (Spawn on All Blocks, No Redundancy Checks, Component Reuse)',
             'color': None
         },
     'all-blocks+no-reuse+no-redundancy-checks':
         {
-            'label': '\\textbf{Concurrent Analysis} (Spawn on All Blocks, No Redundancy Checks, No Component Reuse)',
+            'label': '\\textbf{Concurrent Analysis}\n (Spawn on All Blocks, No Redundancy Checks, No Component Reuse)',
             'color': None
         },
     'program-entry+no-reuse+redundancy-checks':
         {
-            'label': '\\textbf{Concurrent Analysis} (Spawn on Program Entry, Redundancy Checks, No Component Reuse)',
+            'label': '\\textbf{Concurrent Analysis}\n (Spawn on Program Entry, Redundancy Checks, No Component Reuse)',
             'color': None
         },
     'program-entry+no-reuse+no-redundancy-checks':
         {
-            'label': '\\textbf{Concurrent Analysis} (Spawn on Program Entry, No Redundancy Checks, No Component Reuse)',
+            'label': '\\textbf{Concurrent Analysis}\n (Spawn on Program Entry, No Redundancy Checks, No Component Reuse)',
             'color': None
         },
     'program-entry+reuse+no-redundancy-checks':
         {
-            'label': '\\textbf{Concurrent Analysis} (Spawn on Program Entry, No Redundancy Checks, Component Reuse)',
+            'label': '\\textbf{Concurrent Analysis}\n (Spawn on Program Entry, No Redundancy Checks, Component Reuse)',
             'color': None
         },
     'program-entry+reuse+redundancy-checks':
         {
-            'label': '\\textbf{Concurrent Analysis} (Spawn on Program Entry, Redundancy Checks, Component Reuse)',
+            'label': '\\textbf{Concurrent Analysis}\n (Spawn on Program Entry, Redundancy Checks, Component Reuse)',
             'color': None
         }
 }
