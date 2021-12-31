@@ -20,7 +20,6 @@ def next_power_of_10(value):
 def draw(data, configs, only_correct=True):
     x = []
     y = []
-    legend = [Common.labels[configs[0]], Common.labels[configs[1]]]
 
     for index in range(0, len(data[configs[0]])):
         first = data[configs[0]][index]
@@ -29,11 +28,11 @@ def draw(data, configs, only_correct=True):
         assert first.name == second.name
 
         if only_correct:
-            if first.category == Category.wrong or second.category != Category.wrong:
+            if first.category == Category.wrong or second.category == Category.wrong:
                 continue
 
-        x.append(first.time)
-        y.append(second.time)
+        y.append(first.time)
+        x.append(second.time)
 
     plt.rc('text', usetex=True)
     plt.rcParams.update({'font.size': 11})
@@ -65,19 +64,6 @@ def draw(data, configs, only_correct=True):
     )
     ax.yaxis.set_label_coords(-0.1, 1.03)
     ax.set_xlabel('CPU Time [s] for ' + Common.labels[configs[1]]['label'], labelpad=5)
-
-    # legend = ax.legend(
-    #    legend,
-    #    frameon=False,
-    #    bbox_to_anchor=(1.0, 1.01),
-    #    loc='lower right',
-    #    handletextpad=-0.2
-    # )
-    # plt.setp(legend.get_texts(), va='center')
-    # for handle in legend.legendHandles:
-    #     handle.set_sizes([20])
-    # for text in legend.get_texts():
-    #     text.set_y(2)
 
     fig.tight_layout()
     plt.show()
