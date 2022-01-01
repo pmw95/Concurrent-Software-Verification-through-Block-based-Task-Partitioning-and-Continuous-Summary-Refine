@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 from Run import Category
 import numpy as np
 
-def draw(data):
+def draw(data, filename):
     plt.rc('text', usetex=True)
     plt.rcParams.update({'font.size': 11})
 
@@ -56,9 +56,9 @@ def draw(data):
     fig.tight_layout()
     plt.show()
 
-    fig.savefig('out/categories.svg', format='svg')
+    fig.savefig('out/' + filename, format='svg')
 
-def create_categories(data, configs):
+def create_categories(data, configs, filename):
     result = {}
 
     for config in configs:
@@ -83,6 +83,8 @@ def create_categories(data, configs):
             Category.wrong: wrong,
         }
 
-    draw(result)
+        print('{}: Ratio wrong results: {}'.format(config, wrong / (correct + wrong + error)))
+
+    draw(result, filename)
 
 

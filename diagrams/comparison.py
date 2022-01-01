@@ -1,3 +1,5 @@
+import copy
+
 import matplotlib.pyplot as plt
 import Common
 import matplotlib.ticker as ticker
@@ -17,7 +19,7 @@ def next_power_of_10(value):
     return divisor
 
 
-def draw(data, configs, only_correct=True):
+def draw(data, configs, filename, only_correct=True):
     x = []
     y = []
 
@@ -28,7 +30,10 @@ def draw(data, configs, only_correct=True):
         assert first.name == second.name
 
         if only_correct:
-            if first.category == Category.wrong or second.category == Category.wrong:
+            if first.category != Category.correct or second.category != Category.correct:
+                print(first.category)
+                print(second.category)
+                print('\n')
                 continue
 
         y.append(first.time)
@@ -68,16 +73,16 @@ def draw(data, configs, only_correct=True):
     fig.tight_layout()
     plt.show()
 
-    fig.savefig('out/comparison.svg', format='svg')
+    fig.savefig('out/' + filename, format='svg')
 
-def create_comparison(data, configs):
+def create_comparison(data, configs, filename):
     result = {}
 
     for config in configs:
-        runs = data[config].copy()
+        runs = copy.deepcopy(data[config])
         runs.sort(key=lambda run: run.name)
         result[config] = runs
 
-    draw(result, configs)
+    draw(result, configs, filename)
 
 

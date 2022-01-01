@@ -1,21 +1,35 @@
+import copy
+
 import matplotlib.pyplot as plt
 import numpy as np
 import Common
 
 from Run import Category
 
-def draw(data, colors, only_correct=True):
+def draw(data, colors, filename, only_both_correct=True):
     entries = []
     legend = []
 
     max_count = 0
+
+    if only_both_correct:
+        for index in range(0, len(data[next(iter(data))])):
+            incorrect = False
+            for key in data:
+                if data[key][index].category != Category.correct:
+                    incorrect = True
+
+            if incorrect:
+                for key in data:
+                    data[key][index].category = Category.error
+
     for key in data:
-        if only_correct:
-            data[key] = list(filter(lambda run: run.category == Category.correct, data[key]))
+        data[key] = list(filter(lambda run: run.category == Category.correct, data[key]))
+
         data[key].sort(key=lambda run: run.time)
         entries.append(list(map(lambda run: run.time, data[key])))
         max_count = max(max_count, len(data[key]))
-        legend.append(Common.labels[key]['label'])
+        legend.append(Common.labels[key]['label'].replace('\n', ''))
 
     for index in range(0, len(entries)):
         entry = entries[index]
@@ -65,16 +79,16 @@ def draw(data, colors, only_correct=True):
     fig.tight_layout()
     plt.show()
 
-    fig.savefig('out/quantile.svg', format='svg')
+    fig.savefig('out/' + filename, format='svg')
 
-def create_quantile(data, configs, colors):
+def create_quantile(data, configs, colors, filename, only_both_correct):
     result = {}
 
     for config in configs:
-        runs = data[config].copy()
-        runs.sort(key=lambda run: run.time)
+        runs = copy.deepcopy(data[config])
+        runs.sort(key=lambda run: run.name)
         result[config] = runs
 
-    draw(result, colors)
+    draw(result, colors, filename, only_both_correct)
 
 
