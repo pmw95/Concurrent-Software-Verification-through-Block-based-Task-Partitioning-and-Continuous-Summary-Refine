@@ -79,7 +79,7 @@ def draw(data, colors, filename, only_both_correct=True):
     fig.tight_layout()
     plt.show()
 
-    fig.savefig('out/' + filename, format='svg')
+    fig.savefig('out/' + filename, format='pdf')
 
 def create_quantile(data, configs, colors, filename, only_both_correct):
     result = {}

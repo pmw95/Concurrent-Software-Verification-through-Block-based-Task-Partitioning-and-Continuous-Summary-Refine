@@ -56,7 +56,7 @@ def draw(data, filename):
     fig.tight_layout()
     plt.show()
 
-    fig.savefig('out/' + filename, format='svg')
+    fig.savefig('out/' + filename, format='pdf')
 
 def create_categories(data, configs, filename):
     result = {}

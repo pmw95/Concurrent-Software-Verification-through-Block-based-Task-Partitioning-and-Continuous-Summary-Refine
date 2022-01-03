@@ -73,7 +73,7 @@ def draw(data, configs, filename, only_correct=True):
     fig.tight_layout()
     plt.show()
 
-    fig.savefig('out/' + filename, format='svg')
+    fig.savefig('out/' + filename, format='pdf')
 
 def create_comparison(data, configs, filename):
     result = {}

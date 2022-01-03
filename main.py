@@ -20,7 +20,7 @@ if __name__ == '__main__':
         'all-blocks+reuse+no-redundancy-checks',
         'program-entry+reuse+redundancy-checks',
         'program-entry+reuse+no-redundancy-checks'
-    ], 'categories.svg')
+    ], 'categories.pdf')
 
     # Spawn Strategy
     create_quantile(data, [
@@ -29,19 +29,19 @@ if __name__ == '__main__':
     ], [
         (97/255, 61/255, 193/255),
         (237/255, 33/255, 124/255)
-    ], 'spawn-strategy-quantile.svg', False)
+    ], 'spawn-strategy-quantile.pdf', False)
     create_quantile(data, [
         'program-entry+reuse+redundancy-checks',
         'all-blocks+reuse+redundancy-checks'
     ], [
         (97 / 255, 61 / 255, 193 / 255),
         (237 / 255, 33 / 255, 124 / 255)
-    ], 'spawn-strategy-quantile-both-correct.svg', True)
+    ], 'spawn-strategy-quantile-both-correct.pdf', True)
 
     create_comparison(data, [
         'program-entry+reuse+redundancy-checks',
         'all-blocks+reuse+redundancy-checks'
-    ], 'spawn-strategy-comparison.svg')
+    ], 'spawn-strategy-comparison.pdf')
 
     # Component Reuse
     create_quantile(data, [
@@ -50,18 +50,18 @@ if __name__ == '__main__':
     ], [
         (97 / 255, 61 / 255, 193 / 255),
         (237 / 255, 33 / 255, 124 / 255)
-    ], 'component-reuse-quantile.svg', False)
+    ], 'component-reuse-quantile.pdf', False)
     create_quantile(data, [
         'program-entry+reuse+redundancy-checks',
         'program-entry+no-reuse+redundancy-checks'
     ], [
         (97 / 255, 61 / 255, 193 / 255),
         (237 / 255, 33 / 255, 124 / 255)
-    ], 'component-reuse-quantile-both-correct.svg', True)
+    ], 'component-reuse-quantile-both-correct.pdf', True)
     create_comparison(data, [
         'program-entry+reuse+redundancy-checks',
         'program-entry+no-reuse+redundancy-checks'
-    ], 'component-reuse-comparison.svg')
+    ], 'component-reuse-comparison.pdf')
 
     # Redundancy Checks
     create_quantile(data, [
@@ -70,19 +70,19 @@ if __name__ == '__main__':
     ], [
         (97 / 255, 61 / 255, 193 / 255),
         (237 / 255, 33 / 255, 124 / 255)
-    ], 'redundancy-checks-quantile.svg', False)
+    ], 'redundancy-checks-quantile.pdf', False)
     create_quantile(data, [
         'program-entry+reuse+redundancy-checks',
         'program-entry+reuse+no-redundancy-checks'
     ], [
         (97 / 255, 61 / 255, 193 / 255),
         (237 / 255, 33 / 255, 124 / 255)
-    ], 'redundancy-checks-quantile-both-correct.svg', True)
+    ], 'redundancy-checks-quantile-both-correct.pdf', True)
 
     create_comparison(data, [
         'program-entry+reuse+redundancy-checks',
         'program-entry+reuse+no-redundancy-checks'
-    ], 'redundancy-checks-comparison.svg')
+    ], 'redundancy-checks-comparison.pdf')
 
     # Redundancy Checks
     create_quantile(data, [
@@ -91,14 +91,14 @@ if __name__ == '__main__':
     ], [
         (97 / 255, 61 / 255, 193 / 255),
         (237 / 255, 33 / 255, 124 / 255)
-    ], 'comparison-with-predicate.svg', False)
+    ], 'comparison-with-predicate.pdf', False)
     create_quantile(data, [
         'baseline-predicateAnalysis',
         'program-entry+reuse+redundancy-checks'
     ], [
         (97 / 255, 61 / 255, 193 / 255),
         (237 / 255, 33 / 255, 124 / 255)
-    ], 'comparison-with-predicate-both-correct.svg', True)
+    ], 'comparison-with-predicate-both-correct.pdf', True)
 
 
 
